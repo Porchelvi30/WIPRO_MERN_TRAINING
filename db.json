@@ -1,19 +1,23 @@
 {
-  "posts": [
+  "courses": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "name": "React"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "name": "Node"
+    },
+    {
+      "id": 3,
+      "name": "Government Orders"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "registrations": [
+    {
+      "name": "porchelvi",
+      "email": "xyz@gmail.com",
+      "id": 1
+    }
+  ]
 }
