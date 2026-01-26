@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todo Task Directory</title>
+</head>
+<body>
+
+<h2>Company Todo Dashboard</h2>
+
+<table border="1">
+  <tr>
+    <th>User ID</th>
+    <th>Email</th>
+    <th>Completed</th>
+  </tr>
+  <tbody id="result"></tbody>
+</table>
+
+<script>
+  fetch("https://jsonplaceholder.typicode.com/todos")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+
+      // show only first 5 users tasks
+      let firstFive = data.slice(0, 5);
+
+      let tbody = document.getElementById("result");
+
+      firstFive.forEach(function(item) {
+        let row = `
+          <tr>
+            <td>${item.userId}</td>
+            <td>user${item.userId}@company.com</td>
+            <td>${item.completed}</td>
+          </tr>
+        `;
+        tbody.innerHTML += row;
+      });
+
+    })
+    .catch(function(error) {
+      console.log("API Error");
+      alert("Data not loaded");
+    });
+</script>
+
+</body>
+</html>

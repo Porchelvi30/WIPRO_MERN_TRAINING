@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Flowers School</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        /* Header */
+        header {
+            background: #2563eb;
+            color: #ffffff;
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+        }
+
+        header img {
+            height: 60px;
+            border-radius: 12px;
+            background: #ffffff;
+            padding: 5px;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        /* Navigation */
+        nav {
+            background: #e0e7ff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 17px;
+            font-weight: 600;
+            color: #2563eb;
+            padding: 10px 22px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #2563eb;
+            color: #ffffff;
+        }
+
+        /* Main content */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .welcome {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 18px;
+            text-align: center;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .welcome h2 {
+            font-size: 32px;
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            font-size: 18px;
+            color: #475569;
+        }
+
+        .profile {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            border-left: 6px solid #2563eb;
+        }
+
+        .profile h2 {
+            font-size: 26px;
+            margin-bottom: 25px;
+            color: #2563eb;
+        }
+
+        .profile p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #334155;
+        }
+
+        .profile p strong {
+            display: inline-block;
+            width: 140px;
+            color: #2563eb;
+        }
+
+        /* Footer */
+        footer {
+            background: #2563eb;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 6px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTl7ooi8QJ_7nDKaQvdvFPuAJPAKkelNoJJP3p3vixnxrZiPsVxhWQtcls&s" alt="School Logo">
+        <h1>Spring Flowers School</h1>
+    </header>
+
+    <nav>
+        <a href="#">🏠 Home</a>
+        <a href="#">👨‍🎓 Student Profile</a>
+        <a href="#">📞 Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to Spring Flowers School</h2>
+            <p>Empowering students for a bright and successful future</p>
+        </div>
+
+        <div class="profile">
+            <h2>Student Profile</h2>
+            <p><strong>Name:</strong> Ajay</p>
+            <p><strong>Class:</strong> 10th Standard</p>
+            <p><strong>Roll Number:</strong> 25</p>
+            <p><strong>School:</strong> Spring Flowers School</p>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Spring Flowers School | All Rights Reserved
+    </footer>
+
+</body>
+</html>
