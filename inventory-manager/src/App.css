@@ -1,0 +1,4 @@
+body { padding: 20px; background: #f0f0f0; font-family: Arial; }
+.employee { border: 1px solid #ddd; padding: 20px; margin: 10px; border-radius: 8px; background: white; }
+button { background: #4CAF50; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; }
+.list { display: flex; flex-wrap: wrap; gap: 20px; }

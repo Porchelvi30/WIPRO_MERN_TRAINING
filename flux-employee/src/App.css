@@ -1,0 +1,63 @@
+.app-container {
+  width: 100%;
+  max-width: 700px;
+  background: #1f1f1f;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.employee-box h3 {
+  margin: 0 0 12px;
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.input-row input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  outline: none;
+  font-size: 14px;
+  background: #111;
+  color: #fff;
+}
+
+.input-row button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #646cff;
+  color: white;
+}
+
+.input-row button:hover {
+  background: #535bf2;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 18px 0;
+}
+
+.employee-list p {
+  margin: 8px 0;
+  background: #111;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
