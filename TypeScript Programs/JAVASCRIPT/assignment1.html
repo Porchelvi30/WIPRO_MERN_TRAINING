@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment</title>
+</head>
+<body>
+
+<h3>Output</h3>
+<pre id="out"></pre>
+
+<script>
+const products = [
+    { item: "Laptop", price: 50000 },
+    { item: "Mouse", price: 1500 },
+    { item: "Keyboard", price: 3000 }
+];
+const discounted = products.map(p => ({
+    item: p.item,
+    price: p.price * 0.9}));
+
+const expensive = discounted.filter(p => p.price > 2000);
+
+const total = discounted.reduce((sum, p) => sum + p.price, 0);
+
+document.getElementById("out").innerText ="Discounted Products:\n" +JSON.stringify(discounted, null, 2) +"\n\nFiltered Products (>2000):\n" +
+JSON.stringify(expensive, null, 2) +
+"\n\nTotal Price:\n" +total;
+</script>
+
+</body>
+</html>

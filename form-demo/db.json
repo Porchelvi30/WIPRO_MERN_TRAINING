@@ -1,0 +1,23 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "React"
+    },
+    {
+      "id": 2,
+      "name": "Node"
+    },
+    {
+      "id": 3,
+      "name": "Government Orders"
+    }
+  ],
+  "registrations": [
+    {
+      "name": "porchelvi",
+      "email": "xyz@gmail.com",
+      "id": 1
+    }
+  ]
+}

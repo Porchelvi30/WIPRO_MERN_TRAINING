@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product CRUD</title>
+</head>
+<body>
+
+<h3>Product Management</h3>
+
+<button onclick="fetchProducts()">Fetch Products</button>
+<button onclick="addProduct()">Add Product</button>
+<button onclick="updateProduct()">Update Product</button>
+<button onclick="deleteProduct()">Delete Product</button>
+
+<ul id="productList"></ul>
+
+<script>
+const jsonData = `[
+    {"item":"Laptop","price":60000},
+    {"item":"Mouse","price":500},
+    {"item":"Keyboard","price":700},
+    {"item":"Speaker","price":5000}
+]`;
+
+let products = JSON.parse(jsonData);
+const ul = document.getElementById("productList");
+
+function fetchProducts() {
+    ul.innerHTML = "";
+    products.forEach((product, index) => {
+    const li = document.createElement("li");
+    li.textContent = `${index} - ${product.item} : ₹${product.price}`;
+    ul.appendChild(li);
+    });
+}
+
+function addProduct() {
+    const item = prompt("Enter product name");
+    const price = prompt("Enter price");
+    products.push({ item, price });
+    fetchProducts();
+}
+
+function updateProduct() {
+    const index = prompt("Enter product index");
+    const price = prompt("Enter new price");
+    products[index].price = price;
+    fetchProducts();
+}
+function deleteProduct() {
+    const index = prompt("Enter product index");
+    products.splice(index, 1);
+    fetchProducts();
+}
+</script>
+
+</body>
+</html>

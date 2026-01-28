@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Salary Calculator</title>
+    <style>
+        body { font-family: Arial; max-width: 350px; margin: 50px auto; padding: 20px; }
+        input, button { width: 100%; padding: 10px; margin: 5px 0; }
+        button { background: #4CAF50; color: white; border: none; }
+        #result { margin-top: 20px; padding: 15px; background: #f0f8ff; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>Salary Calculator</h2>
+    
+    <input type="text" id="name" placeholder="Name">
+    <input type="number" id="days" placeholder="Days worked">
+    <input type="number" id="pay" placeholder="Daily pay (₹)" step="0.01">
+    <input type="number" id="bonus" placeholder="Bonus (₹)" step="0.01">
+    
+    <button onclick="calc()">Calculate</button>
+    <div id="result"></div>
+
+    <script>
+        function calc() {
+            let name = document.getElementById('name').value || 'Employee';
+            let days = parseFloat(document.getElementById('days').value) || 0;
+            let pay = parseFloat(document.getElementById('pay').value) || 0;
+            let bonus = parseFloat(document.getElementById('bonus').value) || 0;
+            
+            let basic = days * pay;
+            let total = basic + bonus;
+            let tax = total > 50000 ? total * 0.1 : 0;
+            let net = total - tax;
+            
+            document.getElementById('result').innerHTML = `
+                <h3>${name}'s Salary</h3>
+                Basic: ₹${basic.toFixed(2)}<br>
+                Total: ₹${total.toFixed(2)}<br>
+                Tax: ₹${tax.toFixed(2)}<br>
+                <strong>Net: ₹${net.toFixed(2)}</strong>
+            `;
+        }
+    </style>
+</body>
+</html>
